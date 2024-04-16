@@ -3,7 +3,7 @@
 
 import mysql.connector
 
-aisdaij
+
 ##  Conexão com o banco de dados
 mydb = mysql.connector.connect(
   host="localhost", #ip de destino seja no teu pc ou em outro lugar
