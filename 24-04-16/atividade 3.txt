@@ -1,0 +1,28 @@
+--------------------------------------------------------------
+---------------------- - - 3.0 - - ---------------------------
+
+DEVE -SE AGORA VERIFICAR NO BANCO DE DADOS A EXISTENCIA DO DB
+
+--------------------------------------------------------------
+
+CRIAR UM COMANDO NO SCRIPT CASO O BANCO DE DADAOS JÁ EXISTA INFORME AO 
+USUÁRIO QUE NÃO É POSSÍVEL CRIAR O BANCO 
+
+    CRIE O BANCO CASO NAO EXISTA
+    SE EXISTE IGNORE E INFORME
+    CASO ERRO ALERTE O USUÁRIO
+
+--------------------------------------------------------------
+---------------------- - - 3.1 - - ---------------------------
+CRIE UMA TABELA COMPLETA NO BANCO DE DADOS USANDO COMANDOS SQL;
+    CREATE TABLE IF NOT EXISTS `usu
+    CASO ELA JÁ EXISTA , APRESENTE UMA MENSAGEM PARA O USUÁRIO
+
+
+--------------------------------------------------------------
+---------------------- - - 3.2 - - ---------------------------
+INSIRA DADOS CONFORME A AS REGRAS DAS COLUNAS
+
+--------------------------------------------------------------
+---------------------- - - 3.3 - - ---------------------------
+PRINTAR DADOS DO BANCO NA TELA
