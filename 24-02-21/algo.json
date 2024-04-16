@@ -1,0 +1,14 @@
+{
+"pais":"Brasil",
+"estados":{
+    "SP": {
+        "nome":"Sao Paulo",
+        "capital":"São Paulo"},
+        "população":"20.709.155",
+        "idh":"0.834",
+        "municípios":{
+            "cidade":["São Paulo","Guarulhos"]
+        }
+
+    }
+}
