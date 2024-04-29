@@ -19,3 +19,7 @@ except mysql.connector.Error as error :
 # Fechar conexão com o banco de dados
 cursor.close()
 mydb.close()
+
+
+
+
