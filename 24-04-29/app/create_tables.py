@@ -1,5 +1,5 @@
 import sqlite3
-conexao = sqlite3.connect('capirotinho.db') 
+conexao = sqlite3.connect('24-04-29\\db_pet.db') 
 c = conexao.cursor()
 def criar_tabelas():
     c.execute('''
