@@ -20,7 +20,7 @@ p.data_nascimento
 from pessoas p 
 """
 def mostrar_cliente():
-    with sqlite3.connect('capirotinho.db') as conexao:
+    with sqlite3.connect('24-04-29\\db_pet.db') as conexao:
         return pd.read_sql_query(consulta_cliente, conexao)
 
 col1,col2,col3,col4,col5=st.columns(5)

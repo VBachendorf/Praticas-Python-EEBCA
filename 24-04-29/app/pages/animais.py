@@ -1,6 +1,5 @@
 import streamlit as st
 import sqlite3
-from conf.db import banco_mysql
 import pandas as pd
 consulta_animal =  """
 SELECT
@@ -18,11 +17,9 @@ left join pessoas p on
     p.id = a.id_pessoa    
 
 """
-
-conexao = banco_mysql()
 def mostrar_animais():
-    cursor = conexao.cursor()
-    return pd.read_sql_query(consulta_animal, conexao)
+    with sqlite3.connect('24-04-29\\db_pet.db') as conexao:
+        return pd.read_sql_query(consulta_animal, conexao)
 
 
 df = mostrar_animais()
