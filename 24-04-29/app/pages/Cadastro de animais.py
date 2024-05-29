@@ -61,7 +61,7 @@ def mostrar_pessoa():
 pessoa=mostrar_pessoa()
 
 
-st.title('Cadastro de Animais !')
+st.write('Cadastro de Animais !')
 tab1,tab2,tab3 = st.tabs(['Animal','Espécie','Raça'])
 #---------------------------PRIMEIRA ABA
 with tab3:

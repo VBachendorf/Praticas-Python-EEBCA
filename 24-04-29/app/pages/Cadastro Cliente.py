@@ -1,6 +1,15 @@
 import streamlit as st
 import sqlite3
 import pandas as pd
+
+
+def cadastroPessoa(nome,data_nascimento,sexo,contato,cidade):
+    conexao = sqlite3.connect('capirotinho.db') 
+    c = conexao.cursor()
+    c.execute("INSERT INTO pessoas (nome,data_nascimento,sexo,contato,cidade) VALUES (?,?,?,?,?)",(nome,data_nascimento,sexo,contato,cidade))
+    print('inserido')
+    conexao.commit()
+
 consulta_cliente =  """
 SELECT 
 p.nome,
@@ -14,25 +23,16 @@ def mostrar_cliente():
     with sqlite3.connect('capirotinho.db') as conexao:
         return pd.read_sql_query(consulta_cliente, conexao)
 
+col1,col2,col3,col4,col5=st.columns(5)
 
-df = mostrar_cliente()
+a=col1.text_input('Nome do(a) Cliente')
+b=col2.text_input('data de nascimento')
+c=col3.radio('Sexo',['Mas','Fem'])
+st.write(c)
+d=col4.number_input('Contato do(a) Cliente',min_value=0)
+e=col5.text_input('Cidade')
 
-# Adiciona a opção 'Mostrar todos'
-opcoes = df['nome'].unique().tolist()
-opcoes.append('Mostrar todos')
+if st.button('Cadastrar'):
 
-
-
-# Seleciona o animal usando um selectbox
-col1, col2 = st.columns(2)
-select_cliente = col1.selectbox('Selecione o Cliente', opcoes)
-
-# Filtra o DataFrame com base no animal selecionado
-if select_cliente == 'Mostrar todos':
-    df_filtrado = df
-else:
-    df_filtrado = df.loc[df['nome'] == select_cliente]
-
-# Exibe o DataFrame filtrado
-
-st.dataframe(df_filtrado)
+    cadastroPessoa(a,b,c,d,e)
+    st.success(f'Cliente {a} cadastrado(a)!')
